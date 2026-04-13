@@ -2,132 +2,133 @@
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Theophilus Omoregbee</title>
-    <meta
-      name="description"
-      content="Creator. Thinker. Writer. Developer. Photographer."
-    />
-    <meta name="viewport" content="width=device-width" />
-    <style type="text/css">
-      * {
-        margin: 0;
-        padding: 0;
-        font-weight: 300;
+    <meta name="description" content="Theophilus Omoregbee — Creator, Thinker, Writer, Developer." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f0f0e" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='24' font-size='24' font-family='system-ui'%3ET%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <style>
+      :root {
+        --bg: #fdfdfc;
+        --fg: #141414;
+        --mute: #8a8a87;
+        --accent: #c2410c;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #0f0f0e; --fg: #ededea; --mute: #7c7c78; --accent: #e58a5c; }
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      html { font-family: 'Inter', system-ui, sans-serif; }
+      @supports (font-variation-settings: normal) {
+        html { font-family: 'Inter var', system-ui, sans-serif; }
       }
 
       body {
-        height: 100vh;
+        background: var(--bg);
+        color: var(--fg);
+        font-size: 15px;
+        line-height: 1.6;
+        font-feature-settings: 'ss01', 'cv11';
+        -webkit-font-smoothing: antialiased;
+        min-height: 100vh;
         display: flex;
-        font-size: 1.2em;
         align-items: center;
-        font-family: system-ui, sans-serif;
-        flex-direction: column;
         justify-content: center;
+        padding: 2.5rem 1.5rem;
         text-align: center;
-        padding: 0 15px;
       }
+
+      main { max-width: 44rem; width: 100%; }
 
       h1 {
-        margin: 20px 1rem 1.5rem 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.4rem;
       }
 
-      p,ul {
-        margin-bottom: 1.5rem;
+      .tag {
+        font-size: 0.92rem;
+        color: var(--mute);
+        margin-bottom: 0.35rem;
       }
 
-      ul {
+      .where {
+        font-size: 0.8rem;
+        color: var(--mute);
+        margin-bottom: 2rem;
         display: inline-flex;
-        list-style: none;
-        text-decoration: underline;
+        align-items: center;
+        gap: 0.45rem;
       }
 
-      li {
-        font-size: 0.8em;
-        padding-left: 1em;
+      .dot {
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: var(--accent);
+        display: inline-block;
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent);
+        animation: pulse 2.4s ease-out infinite;
+      }
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
+        100% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent) 0%, transparent); }
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 1.4rem;
+        font-size: 0.92rem;
+        white-space: nowrap;
       }
 
       a {
-        color: inherit;
+        color: var(--fg);
         text-decoration: none;
+        position: relative;
+        transition: color 0.15s ease;
       }
 
-      a:hover {
-        text-decoration: underline;
+      a::after {
+        content: "";
+        position: absolute;
+        left: 0; right: 0; bottom: -2px;
+        height: 1px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.2s ease;
       }
 
-      @media (min-width: 320px) and (max-width: 480px) {
-        ul {
-          display: block;
-        }
-        li {
-          padding: 0.3em;
-        }
+      a:hover, a:focus-visible { color: var(--accent); outline: none; }
+      a:hover::after, a:focus-visible::after { transform: scaleX(1); }
+
+      @media (max-width: 640px) {
+        nav { flex-wrap: wrap; gap: 0.5rem 1rem; }
       }
     </style>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-164045036-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-164045036-1");
-    </script>
   </head>
-
   <body>
-    <h1>Theophilus Omoregbee</h1>
-    <p class="description">
-      Creator. Thinker. Writer. Developer. Photographer.
-    </p>
-    <ul>
-      <li>
-        <a href="mailto:theo4u@ymail.com">Email</a>
-      </li>
-      <li>
-        <a href="https://github.com/theoomoregbee" target="_blank">GitHub</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/theoomoregbee" target="_blank">Twitter</a>
-      </li>
-      <li>
-        <a href="https://instagram.com/theoomoregbee" target="_blank"
-          >Instagram</a
-        >
-      </li>
-      <li>
-        <a href="https://linkedin.com/in/theoomoregbee" target="_blank"
-          >LinkedIn</a
-        >
-      </li>
-      <li>
-        <a href="https://medium.com/@theoomoregbee" target="_blank">Medium</a>
-      </li>
-      <li>
-        <a
-          href="https://stackoverflow.com/users/5836034/theophilus-omoregbee"
-          target="_blank"
-          >Stack Overflow</a
-        >
-      </li>
-<!--       <li>
-        <a
-          href="https://laslas.life"
-          target="_blank"
-          >Laslas.life (Weekend activities)</a
-        >
-      </li> -->
-    </ul>
-    <p align="center">
-      <a href="https://www.codementor.io/@theo4u?refer=badge">
-        <img src="https://www.codementor.io/m-badges/theo4u/get-help.svg" />
-      </a>
-    </p>
+    <main>
+      <h1>Theophilus Omoregbee</h1>
+      <p class="tag">Creator. Thinker. Writer. Developer.</p>
+      <p class="where"><span class="dot"></span>Toronto, Canada</p>
+      <nav>
+        <a href="mailto:hi@theoomoregbee.com">Email</a>
+        <a href="https://github.com/theoomoregbee" target="_blank" rel="me noopener">GitHub</a>
+        <a href="https://linkedin.com/in/theoomoregbee" target="_blank" rel="me noopener">LinkedIn</a>
+        <a href="https://twitter.com/theoomoregbee" target="_blank" rel="me noopener">Twitter</a>
+        <a href="https://medium.com/@theoomoregbee" target="_blank" rel="me noopener">Medium</a>
+        <a href="https://stackoverflow.com/users/5836034/theophilus-omoregbee" target="_blank" rel="me noopener">Stack Overflow</a>
+        <a href="https://www.codementor.io/@theo4u" target="_blank" rel="me noopener">Codementor</a>
+      </nav>
+    </main>
   </body>
 </html>
